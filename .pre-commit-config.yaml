@@ -1,28 +1,39 @@
+---
 repos:
-- repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.4.0
-  hooks:
-  - id: check-yaml
-  - id: end-of-file-fixer
-  - id: trailing-whitespace
-    exclude: '\.(pdb|gro|top|sdf)$'
-  - id: debug-statements
-- repo: https://github.com/psf/black
-  rev: 23.9.1
-  hooks:
-  - id: black-jupyter
-    files: ^examples
-- repo: https://github.com/nbQA-dev/nbQA
-  rev: 1.7.0
-  hooks:
-    - id: nbqa-pyupgrade
-      files: ^examples
-      args:
-        - --py38-plus
-    - id: nbqa-isort
-      files: ^examples
-- repo: https://github.com/kynan/nbstripout
-  rev: 0.6.1
-  hooks:
-    - id: nbstripout
-      files: ^examples
+    - repo: https://github.com/pre-commit/pre-commit-hooks
+      rev: v4.4.0
+      hooks:
+          - id: check-yaml
+          - id: end-of-file-fixer
+          - id: trailing-whitespace
+            exclude: \.(pdb|gro|top|sdf)$
+          - id: debug-statements
+    - repo: https://github.com/jumanjihouse/pre-commit-hook-yamlfmt
+      rev: 0.2.1 # or other specific tag
+      hooks:
+          - id: yamlfmt
+# - repo: https://github.com/google/yamlfmt
+#  rev: v0.8.0
+#  hooks:
+#   - id: yamlfmt
+    - repo: https://github.com/psf/black
+      rev: 23.9.1
+      hooks:
+          - id: black-jupyter
+            files: ^notebooks
+    - repo: https://github.com/nbQA-dev/nbQA
+      rev: 1.7.0
+      hooks:
+          - id: nbqa-black
+            files: ^notebooks
+          - id: nbqa-isort
+            files: ^notebooks
+          - id: nbqa-pyupgrade
+            files: ^notebooks
+            args:
+                - --py38-plus
+    - repo: https://github.com/kynan/nbstripout
+      rev: 0.6.1
+      hooks:
+          - id: nbstripout
+            files: ^notebooks
