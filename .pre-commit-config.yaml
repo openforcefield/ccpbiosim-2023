@@ -1,0 +1,28 @@
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v4.4.0
+  hooks:
+  - id: check-yaml
+  - id: end-of-file-fixer
+  - id: trailing-whitespace
+    exclude: '\.(pdb|gro|top|sdf)$'
+  - id: debug-statements
+- repo: https://github.com/psf/black
+  rev: 23.9.1
+  hooks:
+  - id: black-jupyter
+    files: ^examples
+- repo: https://github.com/nbQA-dev/nbQA
+  rev: 1.7.0
+  hooks:
+    - id: nbqa-pyupgrade
+      files: ^examples
+      args:
+        - --py38-plus
+    - id: nbqa-isort
+      files: ^examples
+- repo: https://github.com/kynan/nbstripout
+  rev: 0.6.1
+  hooks:
+    - id: nbstripout
+      files: ^examples
