@@ -1,0 +1,16 @@
+---
+name: openff-env
+channels:
+    - jaimergp/label/unsupported-cudatoolkit-shim
+    - conda-forge
+    - openeye
+dependencies:
+    - jupyterlab
+    - openff-toolkit-examples ==0.14.3
+    - smirnoff-plugins =2023
+    - openff-bespokefit
+    - xtb-python
+    - nomkl
+    - nb_conda_kernels
+    # Optional, requires a free-for-academics license: https://www.eyesopen.com/academic-licensing
+    - openeye-toolkits
