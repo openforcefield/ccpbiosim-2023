@@ -1,37 +1,24 @@
-# Outline
+## Main session - Thursday (2pm-5pm)
 
-## Main session
+* TALK - Intro to OpenFF (DC, ~30mins)
+* Notebook: Preview
+* Notebook: Units
+* Notebook: Force fields
+* Notebook: Molecule cookbook
+* Notebook: Topologies
+* EXPERIMENTING - leave time for users to try out their own molecules, troubleshooting
 
-* Preview/show off a "simple" top-to-bottom example, without going into the details
-* Dealing with units
-  * [notebook](https://github.com/openforcefield/interchange-workshop-2022/blob/main/notebooks/units.ipynb)
-* Loading small molecules
-  * Molecule cookbook
-* Working with topologies
-  * OpenMM interoperability
-* Loading proteins/biopolymers
-  * There should be a "cookbook" for this
-* Chemical perception
-* Loading force fields
-  * Briefly walk through an OFFXML file
-  * Briefly describe each "recommended" force field
+## Main session - Friday (9.30am-12pm)
+
+TALK - modifying force fields (DEXP), maybe rosemary, v-sites & nagl (DC/MT?)
+
 * Creating, exploring Interchange objects
 * Preparing protein-ligand systems
   * Load protein/ligand/force field
   * Solvating/box-packing
   * Running single-point energies or simulations in OpenMM, GROMACS, Amber
 
-## (extra) Other topics within OpenFF
-
-* NAGL for assign charges on polymers, medium-sized molecules
-* What to expect with Rosemary
-* Vectorized representations
-* ParameterHandler plugins
-* Modifying force fields
-* Virtual sites
-
-## (extra) Other topics with adjacent tools
-
-* PDBFixer (PDB files and water packing)
-* More PACKMOL?
-* `openmmforcefields`
+## Main session - Friday (1pm-3pm)
+* TALK - BespokeFit (DC, ~15mins)
+* Bespokefit workshop (DC/MB)
+* EXPERIMENTING - leave time for users to try out their own molecules, troubleshooting
