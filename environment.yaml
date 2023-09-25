@@ -7,10 +7,6 @@ channels:
 dependencies:
     - jupyterlab
     - openff-toolkit-examples ==0.14.3
-    - smirnoff-plugins =2023
-    - openff-bespokefit
-    - xtb-python
-    - nomkl
-    - nb_conda_kernels
+    - openff-nagl ==0.3.1
     # Optional, requires a free-for-academics license: https://www.eyesopen.com/academic-licensing
     - openeye-toolkits
