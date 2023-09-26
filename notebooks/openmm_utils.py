@@ -3,7 +3,11 @@ import openmm.unit
 from openff.interchange import Interchange
 
 
-def run_openmm(interchange: Interchange, reporter_frequency: int = 100):
+def run_openmm(
+    interchange: Interchange,
+    reporter_frequency: int = 100,
+    trajectory_name="preview.dcd",
+):
     simulation = interchange.to_openmm_simulation(
         integrator=openmm.LangevinIntegrator(
             300 * openmm.unit.kelvin,
@@ -12,7 +16,7 @@ def run_openmm(interchange: Interchange, reporter_frequency: int = 100):
         ),
     )
 
-    dcd_reporter = openmm.app.DCDReporter("trajectory.dcd", reporter_frequency)
+    dcd_reporter = openmm.app.DCDReporter(trajectory_name, reporter_frequency)
     simulation.reporters.append(dcd_reporter)
 
     simulation.context.setVelocitiesToTemperature(300 * openmm.unit.kelvin)

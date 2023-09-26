@@ -115,15 +115,12 @@ def visualize_protein_ligand(
 
     off_atom_to_mdtraj = lambda atom: traj.topology.atom(topology.atom_index(atom))
 
-    protein_atom_indices = [
-        off_atom_to_mdtraj(atom) for atom in topology.molecule(0).atoms
-    ]
     ligand_atom_indices = [
-        off_atom_to_mdtraj(atom) for atom in topology.molecule(1).atoms
+        off_atom_to_mdtraj(atom) for atom in topology.molecule(0).atoms
     ]
 
     traj.image_molecules(
-        anchor_molecules=[protein_atom_indices, ligand_atom_indices],
+        anchor_molecules=[ligand_atom_indices],
         inplace=True,
     )
 
