@@ -137,3 +137,5 @@ biphenyl.top
 data.lmp
 out.inpcrd
 out.prmtop
+
+.DS_Store
