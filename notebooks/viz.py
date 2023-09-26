@@ -98,3 +98,36 @@ def visualize_topology(
     )
 
     return widget
+
+
+def visualize_protein_ligand(
+    filename: str,
+    topology: Topology,
+):
+    """Assumes the protein is first, ligand second, does not visualize other molecules."""
+    import mdtraj
+    import nglview
+
+    traj = mdtraj.load(
+        filename,
+        top=mdtraj.Topology.from_openmm(topology.to_openmm()),
+    )
+
+    off_atom_to_mdtraj = lambda atom: traj.topology.atom(topology.atom_index(atom))
+
+    protein_atom_indices = [
+        off_atom_to_mdtraj(atom) for atom in topology.molecule(0).atoms
+    ]
+    ligand_atom_indices = [
+        off_atom_to_mdtraj(atom) for atom in topology.molecule(1).atoms
+    ]
+
+    traj.image_molecules(
+        anchor_molecules=[protein_atom_indices, ligand_atom_indices],
+        inplace=True,
+    )
+
+    view = nglview.show_mdtraj(traj)
+
+    view.add_line(selection="water", radius=0.1)
+    return view

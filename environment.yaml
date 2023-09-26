@@ -3,11 +3,8 @@ name: openff-env
 channels:
     - jaimergp/label/unsupported-cudatoolkit-shim
     - conda-forge
-    - openeye
 dependencies:
     - jupyterlab
     - openff-toolkit-examples ==0.14.3
     - openff-nagl ==0.3.1
     - openff-nagl-models ==0.1
-    # Optional, requires a free-for-academics license: https://www.eyesopen.com/academic-licensing
-    - openeye-toolkits
