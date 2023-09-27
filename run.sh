@@ -1,0 +1,9 @@
+jupyter nbconvert --to notebook --execute notebooks/preview.ipynb --output=preview.ipynb
+jupyter nbconvert --to notebook --execute notebooks/units.ipynb --output=units.ipynb
+jupyter nbconvert --to notebook --execute notebooks/forcefields.ipynb --output=forcefields.ipynb
+jupyter nbconvert --to notebook --execute notebooks/topologies.ipynb --output=topologies.ipynb
+jupyter nbconvert --to notebook --execute notebooks/bespokefit-protein-ligand.ipynb --output=bespokefit-protein-ligand.ipynb
+jupyter nbconvert --to notebook --execute notebooks/protein-ligand.ipynb --output=protein-ligand.ipynb
+jupyter nbconvert --to notebook --execute notebooks/molecule_cookbook.ipynb --output=molecule_cookbook.ipynb
+jupyter nbconvert --to notebook --execute notebooks/non_protein.ipynb --output=non_protein.ipynb
+jupyter nbconvert --to notebook --execute notebooks/interchange.ipynb --output=interchange.ipynb
