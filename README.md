@@ -18,12 +18,12 @@
 TALK - modifying force fields (DEXP), maybe rosemary, v-sites & nagl (DC/MT?)
 
 * Creating, exploring Interchange objects (~25 mins)
-    * Running single-point energies or simulations in OpenMM, GROMACS, Amber
+  * Running single-point energies or simulations in OpenMM, GROMACS, Amber
 * Preparing protein-ligand systems (~15 mins)
 * Not-protein-ligand simulations (~30 mins, JW will send this by tonight or inform MT that he failed)
-    * Nagl for big organic molecules
-    * Solvating/box-packing with PackMol
-    * (maybe) running in different simulation engines
+  * Nagl for big organic molecules
+  * Solvating/box-packing with PackMol
+  * (maybe) running in different simulation engines
 * (MT sprints to airport)
 
 ### Main session - Friday (1pm-3pm)
