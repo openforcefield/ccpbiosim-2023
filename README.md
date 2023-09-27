@@ -1,36 +1,42 @@
 # 2023 CCPBioSim Training Week materials
 
+Presenters:
+
+* Danny Cole
+* Mat Bieniek
+* Matt Thompson
+
 ## Agenda
 
 ### Main session - Thursday (2pm-5pm)
 
-* TALK - Intro to OpenFF (DC, ~30mins)
-* Notebook: Preview (MT, ~20 min, condensed toolkit showcase, may be good to show that traj can be opened in VMD/whatever viewer they learned in the earlier ABMER workshop))
-* Notebook: Units (MT ~15 min)
+* Talk - Intro to OpenFF
+* Notebook: [Preview](notebooks/preview.ipynb)
+* Notebook: [Units](notebooks/units.ipynb)
 * (break)
-* Notebook: (~25 mins) Force fields
-* Notebook: Molecule cookbook (~30 mins, includes Topology.from_pdb and Topology.from_openmm/mdtraj)
-* Notebook: (~30 mins) Topologies
-* EXPERIMENTING - leave time for users to try out their own molecules, troubleshooting
+* Notebook: [Force Fields](notebooks/forcefields.ipynb)
+* Notebook: [Molecule](notebooks/molecule_cookbook.ipynb)
+* Notebook: [Topology](notebooks/topologies.ipynb)
+* Experimenting - can you load your own molecules into OpenFF?
 
 ### Main session - Friday (9.30am-12pm)
 
-TALK - modifying force fields (DEXP), maybe rosemary, v-sites & nagl (DC/MT?)
-
-* Creating, exploring Interchange objects (~25 mins)
-  * Running single-point energies or simulations in OpenMM, GROMACS, Amber
-* Preparing protein-ligand systems (~15 mins)
-* Not-protein-ligand simulations (~30 mins, JW will send this by tonight or inform MT that he failed)
-  * Nagl for big organic molecules
-  * Solvating/box-packing with PackMol
-  * (maybe) running in different simulation engines
-* (MT sprints to airport)
+* Notebook: [Interchange](notebooks/interchange.ipynb)
+* Notebook: [Protein-ligand systems](notebooks/protein-ligand.ipynb)
+* (break)
+* Notebook: [Non-protein-ligand systems](notebooks/non_protein.ipynb)
+* Experimenting - can you ...
+  * parameterize your molecules with an OpenFF force field?
+  * run a short simulation in OpenMM?
+  * visualize the result?
+  * run a short simulation in another engine (GROMACS/Amber/LAMMPS)?
 
 ### Main session - Friday (1pm-3pm)
 
-* TALK - BespokeFit (DC, ~15mins)
-* Bespokefit workshop (DC/MB)
-* EXPERIMENTING - leave time for users to try out their own molecules, troubleshooting
+* Talk - BespokeFit
+* Notebook: [Bespokefit](https://gist.github.com/Yoshanuikabundi/2860cf864ed1658ceec466bfb599e3fe)
+* Notebook: [Protein-lingand system with bespoke parameters](notebooks/bespokefit-protein-ligand.ipynb)
+* Experimenting - can you use BespokeFit in one of your own systems?
 
 ## Local installation
 
@@ -41,3 +47,11 @@ $ mamba env create --file environment.yaml
 $ ...
 $ mamba activate openff-env
 ```
+
+## More resources
+
+* Main [OpenFF docs](https://docs.openforcefield.org/en/latest/)
+  * See "Projects" on the left for package-specific documentation
+  * Ecosystem-wide [examples](https://docs.openforcefield.org/en/latest/examples.html)
+* [SMIRNOFF](https://openforcefield.github.io/standards/standards/smirnoff/) specification
+* [Discussions](https://github.com/orgs/openforcefield/discussions) - for general usage questions
